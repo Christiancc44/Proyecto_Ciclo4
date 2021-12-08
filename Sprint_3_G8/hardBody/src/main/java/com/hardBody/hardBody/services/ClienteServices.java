@@ -34,4 +34,8 @@ public class ClienteServices {
     public Optional<ClienteModel> obtenerClientePorId(String id){
         return clienteRepository.findById(id);
     }
+
+    public ArrayList<ClienteModel> obtenerClientePorNombre(String nombre){
+        return clienteRepository.findByNombre(nombre);
+    }
 }
