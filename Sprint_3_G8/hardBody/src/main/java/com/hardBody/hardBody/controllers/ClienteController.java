@@ -47,4 +47,9 @@ public class ClienteController {
     public Optional<ClienteModel> obtenerClientePorId(@PathVariable("id") String id) {
         return this.clienteServices.obtenerClientePorId(id);
     }
+
+    @GetMapping(path ="/nombre/{nombre}")
+    public ArrayList<ClienteModel> ClientePorNombre(@PathVariable("nombre") String nombre){
+        return clienteServices.obtenerClientePorNombre(nombre);
+    }
 }
