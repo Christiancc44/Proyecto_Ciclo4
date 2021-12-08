@@ -4,6 +4,5 @@ import com.hardBody.hardBody.models.EntrenadorModel;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public class EntrenadorRepository {
-    
+public interface EntrenadorRepository extends MongoRepository<EntrenadorModel,String> {
 }

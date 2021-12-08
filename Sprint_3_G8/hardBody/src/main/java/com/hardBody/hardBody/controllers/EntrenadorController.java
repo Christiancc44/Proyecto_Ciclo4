@@ -46,7 +46,7 @@ public class EntrenadorController {
     }
 
     @GetMapping(path = "/{id}")
-    public Optional<EntrenadorModel> obtenerClientePorId(@PathVariable("id") String id) {
+    public Optional<EntrenadorModel> obtenerEntrenadorPorId(@PathVariable("id") String id) {
         return this.entrenadorServices.obtenerEntrenadorPorId(id);
     }
     
