@@ -7,7 +7,6 @@ import org.springframework.data.annotation.Id;
 public class ClienteModel {
     @Id
     private String id;
-    
     private String nombres;
     private String apellidos;
     private String telefono;
