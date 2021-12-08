@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-HardBodyApplication<hardBody>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.hardBody.hardBody.HardBodyApplication",
+            "projectName": "hardBody",
+            "args": ""
+        }
+    ]
+}
