@@ -13,7 +13,7 @@ public class ClienteModel {
     private String estatura;
     private String peso;
     private String direccion;
-    private String añoMatricula;
+    private int añoMatricula;
 
     
     public ClienteModel() {
@@ -21,7 +21,7 @@ public class ClienteModel {
 
 
     public ClienteModel(String id, String nombres, String apellidos, String telefono, String estatura, String peso,
-            String direccion, String añoMatricula) {
+            String direccion, int añoMatricula) {
         this.id = id;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -103,12 +103,12 @@ public class ClienteModel {
     }
 
 
-    public String getAñoMatricula() {
+    public int getAñoMatricula() {
         return añoMatricula;
     }
 
 
-    public void setAñoMatricula(String añoMatricula) {
+    public void setAñoMatricula(int añoMatricula) {
         this.añoMatricula = añoMatricula;
     }
 

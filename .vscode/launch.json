@@ -9,6 +9,16 @@
             "mainClass": "com.hardBody.hardBody.HardBodyApplication",
             "projectName": "hardBody",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-HardBodyApplication<hardBody (2)>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.hardBody.hardBody.HardBodyApplication",
+            "projectName": "hardBody (2)",
+            "args": ""
         }
     ]
 }

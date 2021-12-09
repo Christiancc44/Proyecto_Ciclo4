@@ -19,6 +19,9 @@ public class EntrenadorServices {
     }
 
     public EntrenadorModel guardarEntrenador(EntrenadorModel entrenador){
+        entrenador.setNombres(entrenador.getNombres().toUpperCase());
+        entrenador.setApellidos(entrenador.getApellidos().toUpperCase());
+        entrenador.setEspecialidad(entrenador.getEspecialidad().toUpperCase());
         return entrenadorRepository.save(entrenador);
     }
 
@@ -35,4 +38,15 @@ public class EntrenadorServices {
         return entrenadorRepository.findById(id);
     }
 
+    public ArrayList<EntrenadorModel> obtenerEntrenadorPorNombre(String nombres){
+        return entrenadorRepository.findByNombres(nombres);
+    }
+
+    public ArrayList<EntrenadorModel> obtenerPorApellido(String apellidos){
+        return entrenadorRepository.BuscarPorApellido(apellidos);
+    }
+
+    public ArrayList<EntrenadorModel> obtenerPorEspecialidad(String especialidad){
+        return entrenadorRepository.BuscarPorEspecialidad(especialidad);
+    }
 }

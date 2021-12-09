@@ -19,6 +19,8 @@ public class ClienteServices {
     }
 
     public ClienteModel guardarCliente(ClienteModel cliente){
+        cliente.setNombres(cliente.getNombres().toUpperCase());
+        cliente.setApellidos(cliente.getApellidos().toUpperCase());
         return clienteRepository.save(cliente);
     }
 
@@ -35,7 +37,11 @@ public class ClienteServices {
         return clienteRepository.findById(id);
     }
 
-    public ArrayList<ClienteModel> obtenerClientePorNombre(String nombre){
-        return clienteRepository.findByNombre(nombre);
+    public ArrayList<ClienteModel> obtenerClientePorNombre(String nombres){
+        return clienteRepository.findByNombres(nombres);
+    }
+
+    public ArrayList<ClienteModel> obtenerPorApellido(String apellidos){
+        return clienteRepository.BuscarPorApellido(apellidos);
     }
 }

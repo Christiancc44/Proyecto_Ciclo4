@@ -48,8 +48,13 @@ public class ClienteController {
         return this.clienteServices.obtenerClientePorId(id);
     }
 
-    @GetMapping(path ="/nombre/{nombre}")
-    public ArrayList<ClienteModel> ClientePorNombre(@PathVariable("nombre") String nombre){
-        return clienteServices.obtenerClientePorNombre(nombre);
+    @GetMapping(path ="/nombres/{nombres}")
+    public ArrayList<ClienteModel> ClientePorNombre(@PathVariable("nombres") String nombre){
+        return this.clienteServices.obtenerClientePorNombre(nombre.toUpperCase());
+    }
+
+    @GetMapping(path = "/apellidos/{apellidos}")
+    public ArrayList<ClienteModel> ClientePorApellido(@PathVariable("apellidos") String apellido){
+        return clienteServices.obtenerPorApellido(apellido.toUpperCase());
     }
 }

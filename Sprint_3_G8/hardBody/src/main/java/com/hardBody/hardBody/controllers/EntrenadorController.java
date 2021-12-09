@@ -50,4 +50,18 @@ public class EntrenadorController {
         return this.entrenadorServices.obtenerEntrenadorPorId(id);
     }
     
+    @GetMapping(path ="/nombres/{nombres}")
+    public ArrayList<EntrenadorModel> EntrenadorClientePorNombre(@PathVariable("nombres") String nombre){
+        return this.entrenadorServices.obtenerEntrenadorPorNombre(nombre.toUpperCase());
+    }
+
+    @GetMapping(path = "/apellidos/{apellidos}")
+    public ArrayList<EntrenadorModel> EntrenadorPorApellido(@PathVariable("apellidos") String apellido){
+        return entrenadorServices.obtenerPorApellido(apellido.toUpperCase());
+    }
+
+    @GetMapping(path = "/especialidad/{especialidad}")
+    public ArrayList<EntrenadorModel> EntrenadorPorEspecialidad(@PathVariable("especialidad") String especialidad){
+        return entrenadorServices.obtenerPorEspecialidad(especialidad.toUpperCase());
+    }
 }

@@ -8,18 +8,20 @@ public class EntrenadorModel {
     private String id;
     private String nombres;
     private String apellidos;
-    private String añoNacimiento;
+    private String especialidad;
+    private int añoNacimiento;
     private String telefono;
     private String direccion;
-
+    
     public EntrenadorModel() {
     }
 
-    public EntrenadorModel(String id, String nombres, String apellidos, String añoNacimiento, String telefono,
-            String direccion) {
+    public EntrenadorModel(String id, String nombres, String apellidos, String especialidad, int añoNacimiento,
+            String telefono, String direccion) {
         this.id = id;
         this.nombres = nombres;
         this.apellidos = apellidos;
+        this.especialidad = especialidad;
         this.añoNacimiento = añoNacimiento;
         this.telefono = telefono;
         this.direccion = direccion;
@@ -49,11 +51,19 @@ public class EntrenadorModel {
         this.apellidos = apellidos;
     }
 
-    public String getAñoNacimiento() {
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
+
+    public int getAñoNacimiento() {
         return añoNacimiento;
     }
 
-    public void setAñoNacimiento(String añoNacimiento) {
+    public void setAñoNacimiento(int añoNacimiento) {
         this.añoNacimiento = añoNacimiento;
     }
 
@@ -72,9 +82,4 @@ public class EntrenadorModel {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    
-
-    
-    
-
 }
