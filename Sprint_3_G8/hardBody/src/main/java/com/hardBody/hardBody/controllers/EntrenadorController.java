@@ -64,4 +64,9 @@ public class EntrenadorController {
     public ArrayList<EntrenadorModel> EntrenadorPorEspecialidad(@PathVariable("especialidad") String especialidad){
         return entrenadorServices.obtenerPorEspecialidad(especialidad.toUpperCase());
     }
+        
+    @GetMapping(path = "/añoNacimiento/{añoNacimiento}")
+    public ArrayList<EntrenadorModel> EntrenadorPorAñoNacimiento(@PathVariable("añoNacimiento") int añoNacimiento){
+        return entrenadorServices.obtenerPorAñoNacimiento(añoNacimiento);
+    }
 }

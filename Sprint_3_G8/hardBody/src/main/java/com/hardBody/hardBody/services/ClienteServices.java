@@ -44,4 +44,8 @@ public class ClienteServices {
     public ArrayList<ClienteModel> obtenerPorApellido(String apellidos){
         return clienteRepository.BuscarPorApellido(apellidos);
     }
+
+    public ArrayList<ClienteModel> obtenerPorAñoMatricula(int añoMatricula){
+        return clienteRepository.findByAñoMatriculaGreaterThanEqual(añoMatricula);
+    }
 }

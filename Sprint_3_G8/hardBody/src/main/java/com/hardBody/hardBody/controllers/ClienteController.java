@@ -57,4 +57,9 @@ public class ClienteController {
     public ArrayList<ClienteModel> ClientePorApellido(@PathVariable("apellidos") String apellido){
         return clienteServices.obtenerPorApellido(apellido.toUpperCase());
     }
+    
+    @GetMapping(path = "/añoMatricula/{añoMatricula}")
+    public ArrayList<ClienteModel> ClientePorAñoMatricula(@PathVariable("añoMatricula") int añoMatricula){
+        return clienteServices.obtenerPorAñoMatricula(añoMatricula);
+    }
 }

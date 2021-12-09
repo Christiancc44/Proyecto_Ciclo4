@@ -15,4 +15,6 @@ public interface ClienteRepository extends MongoRepository<ClienteModel,String> 
 
     @Query("{apellidos:'?0'}")
     ArrayList<ClienteModel> BuscarPorApellido(String apellido);
+
+    ArrayList <ClienteModel> findByAñoMatriculaGreaterThanEqual(int añoMatricula);
 }

@@ -17,4 +17,6 @@ public interface EntrenadorRepository extends MongoRepository<EntrenadorModel,St
 
     @Query("{especialidad:'?0'}")
     ArrayList<EntrenadorModel> BuscarPorEspecialidad(String apellido);
+
+    ArrayList <EntrenadorModel> findByAñoNacimientoGreaterThanEqual(int añoNacimineto);
 }

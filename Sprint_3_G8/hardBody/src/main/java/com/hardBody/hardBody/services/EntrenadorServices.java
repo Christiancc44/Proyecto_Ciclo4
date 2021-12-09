@@ -49,4 +49,8 @@ public class EntrenadorServices {
     public ArrayList<EntrenadorModel> obtenerPorEspecialidad(String especialidad){
         return entrenadorRepository.BuscarPorEspecialidad(especialidad);
     }
+
+    public ArrayList<EntrenadorModel> obtenerPorAñoNacimiento(int añoNacimiento){
+        return entrenadorRepository.findByAñoNacimientoGreaterThanEqual(añoNacimiento);
+    }
 }
